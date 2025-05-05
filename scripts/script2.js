@@ -71,3 +71,31 @@ window.addEventListener('scroll', () => {
 hammerBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+// redirect to thank you page after form submission
+
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form');
+
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Stop default submission
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        // Optional: Check response.ok here
+        window.location.href = '/thank-you.html'; // Update this path to match your thank-you page
+      })
+      .catch(error => {
+        console.error('Form submission error:', error);
+        alert('Something went wrong. Please try again.');
+      });
+    });
+  }
+});
