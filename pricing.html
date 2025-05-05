@@ -11,7 +11,7 @@ Date: 4/18/2025
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Frequently Asked Q's</title>
+  <title>Pricing</title>
 
   <!-- Favicon -->
   <link rel="shortcut icon" href="images/favicon.ico">
@@ -75,26 +75,78 @@ Date: 4/18/2025
       </div>
     </nav>
 
+  
+
+    <!-- Content -->
+    <div class="text-center pricing-header py-5 bg-light">
+      <h1 class="display-4">Pricing</h1>
+      <p class="lead">Affordable and transparent pricing for all your repair needs.</p>
+      <p class="lead">We base the pricing on how much labor you need - you purchase the materials, and we work with what you have.</p>
+      <p class="lead">We charge $250 per day for one contractor, and we can work with you to find the best solution for your needs.</p>     
+      </div>
+    
 
 
-    <!-- Main Content -->
-    <div class="container faq">
-      <div class="text-center pricing-header py-5 bg-light">
-        <h1 class="display-4">Frequently Asked Q's</h1>
-        <p class="lead">No questions are dumb questions...ask away</p>
-       
-      
-        <p class="lead">Click on the questions below to see the answers!</p>
-        <h3 onclick="ans1()">1. Can you fix the leaky pipe under the sink? And while you're in there, can you also install a brand-new garbage disposal, repaint the cabinets, and update the plumbing to be more eco-friendly?</h3>
-        <p id="answer1"></p> 
+   
+      <div class="container my-5">
+        <h3 class="mb-4">Contractor Pricing</h3>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped text-center align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th>Number of Contractors</th>
+                <th>Price per Contractor (per day)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>$250</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>$125</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>$100</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>$75</td>
+              </tr>
+              <tr>
+                <td>5 or more</td>
+                <td>$50 each</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
-        <h3 onclick="ans2()">2. Can you patch up that hole in the drywall? And while you're in there, can you rewire the whole house to make it more energy-efficient and add some new outlets?</h3>
-        <p id="answer2"></p> 
-
-        <h3 onclick="ans3()">3. Can you fix the broken window? And while you're in there, can you also replace the door, install new blinds, and maybe upgrade the entire security system while we're at it?</h3>
-        <p id="answer3"></p> 
-    </div>
-
+      <div class="text-center calculation py-5 bg-light">
+        <h1 class="display-4">Calculate and estimate</h1>
+        <p class="lead">Enter in the number of contractors you think you'll need and how long you think the job will take to estimate a cost!</p>
+        <div class="container my-5">
+          <h3>Contractor Cost Calculator</h3>
+          <form id="calc-form" class="row g-3">
+            <div class="col-md-6">
+              <label for="contractors" class="form-label">Number of Contractors</label>
+              <input type="number" id="contractors" class="form-control" min="1" required>
+            </div>
+            <div class="col-md-6">
+              <label for="days" class="form-label">Number of Days</label>
+              <input type="number" id="days" class="form-control" min="1" required>
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <button type="button" class="btn btn-estimate" onclick="calculateCost()">Calculate</button>
+            </div>
+          </form>
+          <div class="mt-4">
+            <h5>Total Cost: <span id="totalCost">$0</span></h5>
+          </div>
+        </div>
+      </div>
     
 
     <!-- Footer -->
@@ -119,3 +171,5 @@ Date: 4/18/2025
   </div>
 </body>
 </html>
+
+    

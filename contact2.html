@@ -35,7 +35,7 @@ Date: 4/18/2025
     <!-- Main Nav -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index2.html">🔧 While You're In There</a>
+          <a class="navbar-brand" href="index.html">🔧 While You're In There</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -43,9 +43,9 @@ Date: 4/18/2025
   
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item"><a class="nav-link" href="index2.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-              <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
               <li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
               <li class="nav-item"><a class="nav-link" href="contact2.html">Contact</a></li>
             </ul>
@@ -56,34 +56,84 @@ Date: 4/18/2025
 
     <!-- Contact Form -->
     <div class="container my-5">
-        <h2>Contact Us</h2>
+        <h2 class="mb-4 text-center">Contact Us</h2>
         <form id="contact-form" method="POST" action="https://hooks.zapier.com/hooks/catch/3733025/2xnjyv1/">
-            <div class="mb-3">
-                <label for="firstName" class="form-label">First Name</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" required>
+            <div class="row g-4 shadow-sm p-4 rounded-4 bg-light">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3" style="display:none;">
+                        <label for="email_confirm" style="display:none">Leave this field empty:</label>
+                        <input type="text" id="email_confirm" name="email_confirm" style="display:none">
+                    </div>
+                    <div class="mb-3">
+                        <label for="userType" class="form-label">I am a:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userType" id="teacher" value="teacher" required>
+                            <label class="form-check-label" for="teacher">Teacher</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userType" id="student" value="student" required>
+                            <label class="form-check-label" for="student">Student</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userType" id="contractor" value="contractor" required>
+                            <label class="form-check-label" for="contractor">Contractor</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userType" id="homeowner" value="homeowner" required>
+                            <label class="form-check-label" for="homeowner">Homeowner</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="userType" id="curious" value="curious" required>
+                            <label class="form-check-label" for="curious">Curious</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label for="interests" class="form-label">I am:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="hiring" value="hiring">
+                            <label class="form-check-label" for="hiring">I'm hiring</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="lookingForJob" value="lookingForJob">
+                            <label class="form-check-label" for="lookingForJob">I'm looking for a job</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="diyer" value="diyer">
+                            <label class="form-check-label" for="diyer">I'm a DIYer</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="interests" id="grading" value="grading">
+                            <label class="form-check-label" for="grading">I'm just here to grade your final project</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="math_captcha" class="form-label">What is 2 + 7?</label>
+                        <input type="text" class="form-control form-control-lg" id="math_captcha" name="math_captcha" required>
+                    </div>
+                    <div class="mb-3 g-recaptcha" data-sitekey="6LfafSIrAAAAAMSpYhE-UiWrJJe5I1Sd4nXgvBeY" data-theme="light"></div>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="lastName" class="form-label">Last Name</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" required>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary btn-lg px-5">Submit</button>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="email_confirm" style="display:none">Leave this field empty:</label>
-                <input type="text" id="email_confirm" name="email_confirm" style="display:none">
-            </div>
-            <div class="mb-3">
-                <label for="math_captcha">What is 2 + 7?</label>
-                <input type="text" class="form-control" id="math_captcha" name="math_captcha" required>
-            </div>
-            <div class="mb-3 g-recaptcha" data-sitekey="6LfafSIrAAAAAMSpYhE-UiWrJJe5I1Sd4nXgvBeY" data-theme="dark"></div>
-            <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
 
@@ -99,29 +149,6 @@ Date: 4/18/2025
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <script>
-        // Back to Top Functionality
-        window.addEventListener("load", function () {
-            const hammer = document.getElementById("hammer-btn");
-
-            setTimeout(() => {
-                hammer.classList.add("hammer-resting");
-                hammer.innerHTML = "🔨 Back to Top";
-            }, 1200);
-
-            hammer.addEventListener("click", () => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-        });
-
-        // Simple Math CAPTCHA Validation
-        document.querySelector("form").addEventListener("submit", function(event) {
-            const mathAnswer = document.getElementById("math_captcha").value;
-            if (mathAnswer.trim() !== "9") {
-                alert("Please answer the math question correctly!");
-                event.preventDefault();
-            }
-        });
-    </script>
+    
 </body>
 </html>

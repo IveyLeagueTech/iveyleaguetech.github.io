@@ -27,20 +27,21 @@ var heading = document.querySelector("#answer h2");
 
 // FAQ answer functions
 function ans1() {
-    answer.textContent = "If you don’t see a parent after several hours and the animal is cold or weak, it may be orphaned.";
+    document.getElementById("answer1").textContent = "Let me just juggle all that while I'm under the sink, right next to the leaking pipe that is definitely the easiest thing to fix. I’ll go ahead and make your kitchen look like a brand-new showroom while I’m at it!";
 }
 
 function ans2() {
-    answer.textContent = "Signs of rabies can include excessive drooling, aggression, or acting unusually tame. Do not approach the animal.";
+    document.getElementById("answer2").textContent = "Absolutely! I'll patch that hole, and while I'm at it, I'll rewire your entire house and give it a makeover, too! It's not like I have a million other jobs to do, right?";
 }
 
 function ans3() {
-    answer.textContent = "No. Most birds have a poor sense of smell and will not abandon babies if touched by humans.";
+    document.getElementById("answer3").textContent = "Of course! I'll just take care of that window, replace the door, throw in some new blinds, and give you the Fort Knox-level security system you've always wanted - and all for the same price we quoted for just the window, right?";
 }
 
+// Get the back-to-top button
 document.addEventListener("DOMContentLoaded", function () {
   
-    // Get the back-to-top button
+    
     const backToTopButton = document.getElementById("hammer-btn");
   
       
@@ -72,6 +73,28 @@ hammerBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
+        // Back to Top Functionality
+        window.addEventListener("load", function () {
+          const hammer = document.getElementById("hammer-btn");
+
+          setTimeout(() => {
+              hammer.classList.add("hammer-resting");
+              hammer.innerHTML = "🔨 Back to Top";
+          }, 1200);
+
+          hammer.addEventListener("click", () => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+      });
+
+      // Simple Math CAPTCHA Validation
+      document.querySelector("form").addEventListener("submit", function(event) {
+          const mathAnswer = document.getElementById("math_captcha").value;
+          if (mathAnswer.trim() !== "9") {
+              alert("Please answer the math question correctly!");
+              event.preventDefault();
+          }
+      });
 
 // redirect to thank you page after form submission
 
@@ -99,3 +122,25 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// Cost calculator for contractor estimate
+function getRate(contractors) {
+  if (contractors == 1) return 250;
+  if (contractors == 2) return 125;
+  if (contractors == 3) return 100;
+  if (contractors == 4) return 75;
+  return 50; // 5 or more
+}
+
+function calculateCost() {
+  const contractors = parseInt(document.getElementById('contractors').value);
+  const days = parseInt(document.getElementById('days').value);
+
+  if (contractors >= 1 && days >= 1) {
+    const rate = getRate(contractors);
+    const total = contractors * rate * days;
+    document.getElementById('totalCost').innerText = `$${total.toLocaleString()}`;
+  } else {
+    document.getElementById('totalCost').innerText = 'Invalid input';
+  }
+}
