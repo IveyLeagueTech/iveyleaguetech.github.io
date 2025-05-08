@@ -38,54 +38,16 @@ function ans3() {
     document.getElementById("answer3").textContent = "Of course! I'll just take care of that window, replace the door, throw in some new blinds, and give you the Fort Knox-level security system you've always wanted - and all for the same price we quoted for just the window, right?";
 }
 
-// Get the back-to-top button
+// hammer animation on page load
 document.addEventListener("DOMContentLoaded", function () {
-  
-    
-    const backToTopButton = document.getElementById("hammer-btn");
-  
-      
-    // Smooth scroll back to top when the button is clicked
-    backToTopButton.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", 
-      });
-    });
-  });
+    const hammerBtn = document.getElementById("hammer-btn");
 
-
-// mobile hammer script to show on scroll
-
-const hammerBtn = document.getElementById('hammer-btn');
-
-window.addEventListener('scroll', () => {
-  if (window.innerWidth <= 768) {
-    if (window.scrollY > 200) {
-      hammerBtn.classList.add('visible');
-    } else {
-      hammerBtn.classList.remove('visible');
-    }
-  }
+    setTimeout(() => {
+        hammerBtn.innerHTML = "🔨 While You're In There...Repair";
+    }, 1200);
 });
 
-hammerBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
 
-        // Back to Top Functionality
-        window.addEventListener("load", function () {
-          const hammer = document.getElementById("hammer-btn");
-
-          setTimeout(() => {
-              hammer.classList.add("hammer-resting");
-              hammer.innerHTML = "🔨 Back to Top";
-          }, 1200);
-
-          hammer.addEventListener("click", () => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-          });
-      });
 
       // Simple Math CAPTCHA Validation
       document.querySelector("form").addEventListener("submit", function(event) {
@@ -141,6 +103,6 @@ function calculateCost() {
     const total = contractors * rate * days;
     document.getElementById('totalCost').innerText = `$${total.toLocaleString()}`;
   } else {
-    document.getElementById('totalCost').innerText = 'Invalid input';
+      document.getElementById('totalCost').innerText = 'Invalid input';
+    }
   }
-}
