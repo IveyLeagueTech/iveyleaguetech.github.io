@@ -1,0 +1,653 @@
+/*
+Author: Ivey Rothenberg
+File Name: styles.css
+Date: 04/18/2025
+*/
+
+
+aside, figure, figcaption, body, header, nav, main, img, h1, h3, ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  overflow-x: hidden; 
+}
+
+#wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.bg-dark {
+  background-color: #38ba5aa2 !important;
+}
+
+
+ul {
+  list-style-type: square;
+}
+
+body {
+  background-color: #ff9100;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%; 
+  cursor: url('hammer-claw-sledgehammer-emojipedia-hardware.jpg'),auto, crosshair;
+}
+
+.tab-desk {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.hero-section {
+  width: 100vw; 
+  height: 90vh;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+#why-choose-us {
+  background-color: #f6eee4;
+  margin: 1% auto;
+  width: 100%;
+}
+
+.xparent-bg {
+  background-color: #e4f6e697 !important;
+}
+
+.btn.btn-estimate {
+  display: block;
+  border: none;
+  background-color: #04AA6D;
+  padding: 14px 28px;
+  margin-top: 1%;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.list-group-item {
+  border: none;
+  font-size: 1.1rem;
+}
+
+section#flip-cards {
+  padding: 2% 0;
+  margin: 1% auto;
+  background-color: #2b6cad;
+  
+}
+
+/*scroll bars*/
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgba(213, 251, 180, 0.411); 
+  border-radius: 10px;
+} 
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 102, 0); 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 102, 0); 
+}
+
+/*form*/
+
+input.form-control, textarea.form-control {
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+input.form-control:focus, textarea.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+label.form-label {
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  border-radius: 2rem;
+}
+
+.form-section {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+pricing-header {
+  padding: 2rem;
+}
+
+.bg-light {
+  background-color: #6c25bd69 !important;
+}
+
+/* Skip Navigation */
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  color: #fff;
+  background-color: #2a1f14;
+  text-decoration: none;
+  padding: 0.5%;
+  top: auto;
+  left: auto;
+  right: 1px;
+  z-index: 1;
+}
+
+/* Desktop Viewport */
+@media screen and (min-width: 1000px), print {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .tab-desk {
+    display: none;
+  }
+
+  #info ul {
+    margin-left: 5%;
+  }
+  
+  nav {
+    width: 100%;
+  }
+  
+    body {
+    background: linear-gradient(to left, #96f854, #ff8800);
+  }
+
+  .grid {
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+  }
+
+  aside {
+    grid-column: 1 / span 4;
+    font-size: 2em;
+  }
+
+  form {
+    width: auto;
+  }
+
+  table {
+    border: 1px solid #2a1f14;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+  }
+
+  th, td {
+    border: 1px solid #2a1f14;
+    padding: 1%;
+  }
+
+  th {
+    background-color: #2a1f14;
+    color: white;
+    font-size: 1.15em;
+  }
+
+  tr {
+    background-color: #deccba;
+  }
+
+  nav li {
+    font-size: 1.5em;
+  }
+
+  nav li a {
+    padding: 0.5em 1.5em;
+  }
+
+  nav li a:hover {
+    color: #2a1f14;
+    background-color: #f6eee4;
+    opacity: 0.5;
+  }
+
+
+}
+
+
+/* mobile */
+
+@media (max-width: 768px) {
+#nav-links {
+  display: none;
+  
+}
+
+section#flip-cards {
+  
+  background-color: #2b6cad;
+}
+
+#why-choose-us {
+  background-color: #f6eee4;
+  margin: 75% 10px 10px 10px;
+  width: 100%;
+}
+
+
+div.video {
+  display: flex;
+  width: 100%; 
+  height: 100%;
+}
+
+
+
+.navbar {
+  display: none;
+}
+
+.pricing-header {
+  padding: 2% 2em;
+}
+
+#nav-links.active {
+  display: block;
+  
+}
+
+#icon.active {
+  color: #f6eee4; 
+}
+.mobile {
+  display: block;
+}
+
+
+
+.mobile-nav a {
+  color: #fff;
+  text-align: center;
+  font-size: 2em;
+  text-decoration: none;
+  padding: 3%;
+  display: block;
+}
+
+.mobile-nav a.nav-icon {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #f6eee4;
+  padding: 2%;
+}
+
+.nav-icon div {
+  height: 40px;
+  width: 40px;
+  color: #2a1f14;
+}
+
+/* Header */
+.mobile h1, .mobile h3 {
+  padding: 2%;
+  text-align: center;
+}
+
+.mobile h1 {
+  font-family: "Emblema One";
+}
+
+.mobile h3 {
+  font-family: "Lora";
+}
+
+footer {
+
+  width: 100% !important;
+
+}
+
+/*hammer btn on mobile*/
+
+#hammer-btn {
+    animation: none;
+    transform: none;
+    top: auto;
+    bottom: 2rem;
+    left: auto;
+    right: 2rem;
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: white;
+    color: #000;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  #hammer-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+}
+
+
+/* Navigation */
+nav {
+  background-color: #142a1a;
+  width: 100%; 
+  padding: 0; 
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.nav-item {
+  display: inline-block; 
+}
+
+.nav-link {
+  padding: 1em; 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1em;
+  font-size: 1.5em;
+  font-family: Geneva, Arial, sans-serif;
+  font-weight: bold;
+  border-top: 0.5px solid #f6eee4;
+}
+
+nav li a {
+  display: block;
+  color: #e9230d;
+  padding: 0.5em 2em;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+
+/* Main Content */
+main {
+  font-family: Lora, Verdana, Arial, sans-serif;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+main p {
+  font-size: 1.25em;
+}
+
+main h3 {
+  padding-top: 2%;
+}
+
+main ul {
+  list-style-type: square;
+}
+
+
+.link {
+  color: #4d3319;
+  text-decoration: none;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.action {
+  font-size: 1.75em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.round {
+  border-radius: 6px;
+}
+
+
+.btn-primary {
+  background-color: #ff6f00;   
+  border-color: #ff6f00;
+}
+
+.btn-primary:hover {
+  background-color: #ef4c11;
+}
+
+
+#contact {
+  text-align: center;
+}
+
+div.video {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1% 33.33%;
+  background-color: #e4f6ee;
+  
+}
+
+video {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 14px;
+  background-color: #142a1a;
+  color: #f6eee4;
+  width: 100%;
+  
+  }
+
+footer a {
+  color: #f6eee4;
+  text-decoration: none;
+}
+
+.social img {
+  display: inline-block;
+  padding: 4%;
+}
+
+/* Flip Card */
+
+
+.flip-card {
+  perspective: 1000px;
+  height: 100%; 
+}
+
+.flip-card-inner {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px;
+  margin: auto;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border: 2px solid #2a1f14;
+  border-radius: 10px;
+}
+
+.flip-card-front {
+  background-color: #ff9100;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #38ba5aa2;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+#flip-cards .flip-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#flip-cards .flip-card-back p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+
+
+/* Hammer flip animation */
+@keyframes spinInToCorner {
+  0% {
+    top: 0;
+    left: 0;
+    transform: rotate(0deg) scale(2);
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    transform: rotate(720deg) scale(1.2);
+  }
+  100% {
+    top: auto;
+    bottom: 20px;
+    left: auto;
+    right: 20px;
+    transform: rotate(1440deg) scale(0.8);
+  }
+}
+
+#hammer-btn {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 30px 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  z-index: 9999;
+  transform-origin: center;
+  animation: spinInToCorner 2s ease-in-out forwards;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.5s ease;
+}
+
+#hammer-btn:hover {
+  background-color: #ff6a00;
+}
+
+
+
+
