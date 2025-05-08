@@ -5,7 +5,7 @@ Date: 04/18/2025
 */
 
 
-aside, figure, figcaption, body, header, nav, main, footer, img, h1, h3, ul {
+aside, figure, figcaption, body, header, nav, main, img, h1, h3, ul {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,12 +27,6 @@ html, body {
   flex-grow: 1;
 }
 
-.hero-section .bg-dark {
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-}
-
 .bg-dark {
   background-color: #38ba5aa2 !important;
 }
@@ -42,7 +36,6 @@ ul {
   list-style-type: square;
 }
 
-/* General Styles */
 body {
   background-color: #ff9100;
   display: flex;
@@ -63,12 +56,19 @@ img {
 
 .hero-section {
   width: 100vw; 
-  height: 90vh;  
+  height: 90vh;
   margin: 0;
   padding: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  
+}
+
+#why-choose-us {
+  background-color: #f6eee4;
+  margin: 1% auto;
+  width: 100%;
 }
 
 .xparent-bg {
@@ -91,31 +91,35 @@ img {
   font-size: 1.1rem;
 }
 
+section#flip-cards {
+  padding: 2% 0;
+  margin: 1% auto;
+  background-color: #2b6cad;
+  
+}
+
 /*scroll bars*/
 
-/* width */
+
 ::-webkit-scrollbar {
   width: 20px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgba(213, 251, 180, 0.411); 
   border-radius: 10px;
-}
- 
-/* Handle */
+} 
+
 ::-webkit-scrollbar-thumb {
   background: rgb(255, 102, 0); 
   border-radius: 10px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(255, 102, 0); 
 }
 
-/*form css*/
+/*form*/
 
 input.form-control, textarea.form-control {
   border-radius: 0.5rem;
@@ -256,12 +260,40 @@ pricing-header {
 }
 
 
-/* Mobile Styles */
+/* mobile */
 
 @media (max-width: 768px) {
 #nav-links {
   display: none;
   
+}
+
+section#flip-cards {
+  
+  background-color: #2b6cad;
+}
+
+#why-choose-us {
+  background-color: #f6eee4;
+  margin: 75% 10px 10px 10px;
+  width: 100%;
+}
+
+
+div.video {
+  display: flex;
+  width: 100%; 
+  height: 100%;
+}
+
+
+
+.navbar {
+  display: none;
+}
+
+.pricing-header {
+  padding: 2% 2em;
 }
 
 #nav-links.active {
@@ -314,6 +346,12 @@ pricing-header {
 
 .mobile h3 {
   font-family: "Lora";
+}
+
+footer {
+
+  width: 100% !important;
+
 }
 
 /*hammer btn on mobile*/
@@ -392,9 +430,10 @@ nav li a:hover {
   text-decoration: underline;
 }
 
+
+
 /* Main Content */
 main {
-  padding: 2%;
   font-family: Lora, Verdana, Arial, sans-serif;
   flex-grow: 1;
   overflow-y: auto;
@@ -440,24 +479,36 @@ main ul {
   background-color: #ef4c11;
 }
 
-/* Contact Section */
+
 #contact {
   text-align: center;
 }
 
+div.video {
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1% 33.33%;
+  background-color: #e4f6ee;
+  
+}
 
+video {
+  justify-content: center;
+  align-items: center;
+}
 
 /* Footer */
 footer {
-  width: 100%;
   text-align: center;
   font-size: 14px;
   background-color: #142a1a;
   color: #f6eee4;
-  padding: 1% 0;
-  margin-top: auto;
-  left: 0; 
-}
+  width: 100%;
+  
+  }
 
 footer a {
   color: #f6eee4;
@@ -474,7 +525,7 @@ footer a {
 
 .flip-card {
   perspective: 1000px;
-  height: 100%; /* makes sure it's flexible */
+  height: 100%; 
 }
 
 .flip-card-inner {
@@ -482,6 +533,8 @@ footer a {
   transform-style: preserve-3d;
   position: relative;
   height: 100%;
+  width: 100%;
+  text-align: center;
 }
 
 .flip-card.flipped .flip-card-inner {
@@ -496,7 +549,7 @@ footer a {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* prevent inner scroll */
+  overflow: hidden; 
 }
 
 .flip-card-back {
@@ -511,14 +564,6 @@ footer a {
   margin: auto;
 }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
@@ -554,6 +599,8 @@ footer a {
   font-size: 1.1rem;
   line-height: 1.5;
 }
+
+
 
 
 /* Hammer flip animation */
@@ -600,7 +647,4 @@ footer a {
 #hammer-btn:hover {
   background-color: #ff6a00;
 }
-
-
-
 
